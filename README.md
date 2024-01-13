@@ -1,3 +1,5 @@
+[作って学ぶ Next.js/React Webサイト構築](https://github.com/ebisucom/next-react-website/?tab=readme-ov-file)の学習記録
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
