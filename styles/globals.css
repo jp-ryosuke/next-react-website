@@ -46,6 +46,8 @@
   }
 
   /*リセット*/
+
+  /*主要要素のマージン, パディング, リストマークを削除*/
   body,
   h1,
   h2,
@@ -58,12 +60,14 @@
     list-style: none;
   }
 
+  /*横幅にパティングを含めて処理するように指定*/
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
 
+  /*リンクの色を親要素にそろえて下線を削除*/
   a {
     color: inherit;
     text-decoration: none;
