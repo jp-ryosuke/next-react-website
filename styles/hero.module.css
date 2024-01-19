@@ -1,0 +1,17 @@
+.text {
+  /*上下パディングを設定*/
+  padding-top: calc(var(--display) * 0.5);
+  padding-bottom: calc(var(--display) * 0.7);
+}
+
+.title {
+  /*フォントサイズ, 太さ, 字間を指定*/
+  font-size: var(--display);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.subtitle {
+  /*フォントサイズを指定*/
+  font-size: var(--small-heading2);
+}
