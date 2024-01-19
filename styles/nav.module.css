@@ -4,7 +4,23 @@
   gap: 2em;
 }
 
-.list a:hover {
-  /*ホバー時の文字色をアクセントカラーに指定*/
-  color: var(--accent);
+@media (hover: hover) {
+  /*ホバーできる環境(デスクトップ環境に適用する設定)*/
+  .list a:hover {
+    /*ホバー時の文字色をアクセントカラーに指定*/
+    color: var(--accent);
+  }
+}
+
+@media (hover: none) {
+  /*ホバーできない環境(モバイル環境)に適用する設定*/
+  .list a {
+    /*タップ時に適用されるデバイス標準のハイライトカラーを削除*/
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .list a active {
+    /*タップ時にアクセントカラーで表示するように指定*/
+    color: var(--accent);
+  }
 }
