@@ -1,0 +1,36 @@
+/*両端揃え*/
+.spaceBetween {
+  /*両端揃えのクラス名 spaceBetween で用意*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*横並び(基本形)*/
+.sideBySide {
+  /*横並び(基本形)の設定はクラス名 sideBySide で用意*/
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .sideBySide {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/*横並び(中央揃え)*/
+.sideBySideCenter {
+  /*横並び(中央揃え)の設定はクラス名 sideBySideCenter で用意
+    sideBySide クラスを composes して中央揃えの設定を追加*/
+  composes: sideBySide;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sideBySideCenter {
+    text-align: left;
+  }
+}
