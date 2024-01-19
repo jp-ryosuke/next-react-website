@@ -1,0 +1,10 @@
+.list {
+  /*子要素を横並びにして間隔を2emに指定*/
+  display: flex;
+  gap: 2em;
+}
+
+.list a:hover {
+  /*ホバー時の文字色をアクセントカラーに指定*/
+  color: var(--accent);
+}
