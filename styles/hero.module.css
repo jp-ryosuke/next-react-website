@@ -1,3 +1,7 @@
+.flexContainer {
+  composes: sideBydSideCenter from 'styles/utils.module.css';
+}
+
 .text {
   /*上下パディングを設定*/
   padding-top: calc(var(--display) * 0.5);
