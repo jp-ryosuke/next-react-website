@@ -9,7 +9,7 @@ export default function Layout({ children }) {
 
       <main>
         {/* メインコンテンツの横幅を Layout コンポーネントでまとめて指定する
-        全ページまとめて整えることができるがページごとにコンテンツの横幅を細かく調整することはできなくなる */}
+        全ページまとめて整えることができるがページごとにコンテンツの横幅を細かく調整することはできなくなる*/}
         <Container>{children}</Container>
       </main>
 
