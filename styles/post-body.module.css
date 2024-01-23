@@ -1,0 +1,28 @@
+/*直下の子要素1つ目以外の感覚を上マージンで1.5em*/
+/* どんな要素でも直前にあるどんな要素でも */
+.stack > * + * {
+  margin-top: var(--stack-space, 1.5em);
+}
+
+/*見出しの上の間隔は大きくするように指定*/
+.stack h2,
+.stack h3 {
+  --stack-space: 0.8em;
+}
+
+/*見出しの下の間隔は小さくするように指定*/
+.stack h2 + *,
+.stack h3 + * {
+  --stack-space: 0.8em;
+}
+
+/*文章の行の高さを広くするように指定*/
+.stack p {
+  line-height: 1.8;
+}
+
+/*リストは本文中で使う可能性があるためグローバルスタイルでセットしたスタイルをブラウザ標準にスタイルに戻すように指定*/
+.stack ul {
+  padding: revert;
+  list-style: revert;
+}
