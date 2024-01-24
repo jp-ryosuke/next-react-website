@@ -1,7 +1,7 @@
 /*直下の子要素1つ目以外の間隔を上マージンで1.5em*/
 /* どんな要素でも直前にあるどんな要素でも */
 .stack > * + * {
-  margin-top: var(--stack-space, 1.5em);
+  margin-top: var(--stack-space, 1.5em) !important;
 }
 
 /*見出しの上の間隔は大きくするように指定*/
