@@ -11,8 +11,15 @@
     width: 768px;
   }
 
+  /*スクロールに合わせて固定表示する position: sticky
+  top では固定時に上に確保する余白サイズを指定
+  align-self を flex-start 上揃えにしている*/
+
   .sidebar {
     width: 240px;
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
   }
 }
 
