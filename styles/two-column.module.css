@@ -15,3 +15,17 @@
     width: 240px;
   }
 }
+
+/*テキストなどのインライン要素は tex-align で right を指定*/
+.sidebar * {
+  text-align: right;
+}
+
+/*ブロック要素は中身に合わせた横幅 fit-content にして左マージンを auto にすることで右揃えにする
+Flexbox でレイアウトされた要素も右揃えになるように指定する*/
+.sidebar :is(div, ul) {
+  width: fit-content;
+  margin-left: auto;
+  place-items: flex-end;
+  place-content: flex-end;
+}
