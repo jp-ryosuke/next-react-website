@@ -1,0 +1,7 @@
+/* .list をフレックスコンテナにして Flexbox でアイコンを横並びにする
+アイコンのサイズは 24px で間隔が gap で 1.5em フォントサイズの 1.5 倍を指定する*/
+.list {
+  display: flex;
+  gap: 1.5em;
+  font-size: 24px;
+}
