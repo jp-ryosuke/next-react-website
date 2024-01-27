@@ -7,7 +7,7 @@ import Layout from 'components/layout'
 import '@fortawesome/fontawesome-svg--core/styles.css'
 
 //Font Awesome の svg コアが個別に css を適用するのを無効化
-import { config } from '[fortawesome/fontawesome-svg-core'
+import { config } from '@fortawesome/fontawesome-svg-core'
 config.autoAddCss = false
 
 function MyApp({ Component, pageProps }) {
