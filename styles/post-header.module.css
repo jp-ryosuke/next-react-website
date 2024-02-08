@@ -3,7 +3,7 @@
 }
 
 .stack > * + * {
-  margin-top: var(--stack-space, 1em) !important;
+  margin-top: var(--stack-space, 1em);
 }
 
 .subtitle {
