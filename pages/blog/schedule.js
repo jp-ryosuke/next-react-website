@@ -7,6 +7,7 @@ import {
   TwoColumnMain,
   TwoColumnSidebar,
 } from 'components/two-column'
+import ConvertBody from '@/components/convert-body'
 import Image from 'next/legacy/image'
 
 export default function Schedule({
@@ -34,7 +35,7 @@ export default function Schedule({
         <TwoColumn>
           <TwoColumnMain>
             <PostBody>
-              <div dangerouslySetInnerHTML={{ __html: content }} />
+              <ConvertBody contentHTML={content} />
             </PostBody>
           </TwoColumnMain>
           <TwoColumnSidebar></TwoColumnSidebar>
