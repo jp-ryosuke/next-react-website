@@ -1,5 +1,5 @@
 import { parseISO, format } from 'date-fns'
-import js, { ja } from 'date-fns/locale/ja'
+import ja from 'date-fns/locale/ja'
 
 export default function CovertDate({ dateISO }) {
   return (
