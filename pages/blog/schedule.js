@@ -7,7 +7,7 @@ import {
   TwoColumnMain,
   TwoColumnSidebar,
 } from 'components/two-column'
-import ConvertBody from '@/components/convert-body'
+import ConvertBody from '/components/convert-body'
 import Image from 'next/legacy/image'
 
 export default function Schedule({
