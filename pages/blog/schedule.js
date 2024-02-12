@@ -12,6 +12,9 @@ import {
 import ConvertBody from '/components/convert-body'
 import PostCategories from 'components/post-categories'
 import Image from 'next/legacy/image'
+import { getPlaiceholder } from 'plaiceholder'
+
+//ローカルの代替アイキャッチ画像
 import { eyecatchLocal } from 'lib/constants'
 
 export default function Schedule({
@@ -42,6 +45,8 @@ export default function Schedule({
             height={eyecatch.height}
             sizes="(min-width: 1152px) 1152px, 100vw"
             priority
+            placeholder="blur"
+            blurDataURL={eyecatch.blurDataURL}
           />
         </figure>
         <TwoColumn>
@@ -67,8 +72,13 @@ Fulfilled か Rejected に変わると次の処理へと進む*/
 export async function getStaticProps() {
   const slug = 'micro'
   const post = await getPostBySlug(slug)
+
   const description = extractText(post.content)
   const eyecatch = post.eyecatch ?? eyecatchLocal
+
+  //const { base64 } = await getPlaiceholder(eyecatch.url)
+  const { base64 } = await getPlaiceholder('./public/eyecatch.jpg')
+  eyecatch.blurDataURL = base64
 
   return {
     props: {
