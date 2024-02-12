@@ -12,6 +12,7 @@ import {
 import ConvertBody from '/components/convert-body'
 import PostCategories from 'components/post-categories'
 import Image from 'next/legacy/image'
+import { eyecatchLocal } from 'lib/constants'
 
 export default function Schedule({
   title,
@@ -64,16 +65,17 @@ async をつけて関数を宣言すると非同期関数を定義でき、特�
 Fulfilled か Rejected に変わると次の処理へと進む*/
 
 export async function getStaticProps() {
-  const slug = 'schedule'
+  const slug = 'micro'
   const post = await getPostBySlug(slug)
   const description = extractText(post.content)
+  const eyecatch = post.eyecatch ?? eyecatchLocal
 
   return {
     props: {
       title: post.title,
       publish: post.publishDate,
       content: post.content,
-      eyecatch: post.eyecatch,
+      eyecatch: eyecatch,
       categories: post.categories,
       description: description,
     },
